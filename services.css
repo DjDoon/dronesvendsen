@@ -73,22 +73,20 @@ body {
     margin: 10px 0;
   }
   
-  /* Four Boxes Section */
-  .four-boxes {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+ /* Four Boxes Section */
+.four-boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between boxes */
     padding: 20px;
     max-width: 1200px;
-    margin: 0 auto; /* Center the section */
+    margin: 0 auto; /* Center the grid on the page */
   }
   
   .four-boxes .box {
-    width: calc(50% - 20px); /* Two boxes per row, with spacing */
     background-color: #333;
     border-radius: 10px;
     padding: 15px;
-    margin: 10px;
     text-align: center;
     transition: transform 0.3s;
   }
@@ -105,6 +103,7 @@ body {
   .four-boxes .box h3 {
     font-size: 20px;
     margin: 15px 0;
+    color: #fff;
   }
   
   .four-boxes .box p {
@@ -112,22 +111,10 @@ body {
     color: #ccc;
   }
   
-  /* CTA Button Section */
-  .cta-button {
-    text-align: center;
-    margin: 40px 0;
-  }
-  
-  .cta-button .btn {
-    background-color: #555;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  .cta-button .btn:hover {
-    background-color: #777;
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .four-boxes {
+      grid-template-columns: 1fr; /* Switch to one column for small screens */
+    }
   }
   
