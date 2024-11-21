@@ -38,3 +38,8 @@ header {
 header {
   height: 100px; /* Define a fixed height for the header */
 }
+
+.navbar ul li a.active {
+  color: #e6b800; /* Highlight color */
+  text-decoration: underline;
+}
