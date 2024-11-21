@@ -44,76 +44,86 @@ header {
     text-decoration: underline;
   }
   
-/* Hero Image Section */
-.hero-image {
-    width: 100%;
-    height: 400px;
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Hero Image */
+  .hero-image {
+    height: 300px;
     background-size: cover;
     background-position: center;
-    margin-bottom: 30px;
   }
   
   /* Content Section */
   .content-section {
     text-align: center;
-    padding: 30px;
+    padding: 20px;
   }
   
   .content-section h1 {
-    font-size: 2.5rem;
-    color: #ffffff;
-    margin-bottom: 20px;
+    font-size: 2.5em;
+    margin-bottom: 10px;
   }
   
   .content-section p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #cccccc;
+    font-size: 1.2em;
+    color: #555;
   }
   
-  /* Four Boxes Section */
-  .four-boxes {
+  /* Two-by-Two Grid Section */
+  .two-by-two-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 30px;
-  }
-  
-  .box {
-    background-color: #333333;
-    border-radius: 10px;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between the boxes */
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the grid */
+  }
+  
+  .two-by-two-grid .box {
+    border: 1px solid #ddd;
+    border-radius: 8px;
     text-align: center;
-    color: #ffffff;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
   }
   
-  .box img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
+  .two-by-two-grid .box:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
   }
   
-  .box p {
-    font-size: 1rem;
+  .two-by-two-grid img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
   }
   
-  /* Button Section */
+  .two-by-two-grid p {
+    font-size: 1em;
+    color: #333;
+  }
+  
+  /* Call to Action Button */
   .cta-button {
     text-align: center;
-    margin: 30px 0;
+    padding: 20px;
   }
   
   .cta-button a {
-    display: inline-block;
+    background-color: #007BFF;
+    color: #fff;
     padding: 10px 20px;
-    font-size: 1rem;
-    color: #ffffff;
-    background-color: #0078ff;
     text-decoration: none;
+    font-size: 1.2em;
     border-radius: 5px;
+    transition: background-color 0.3s;
   }
   
   .cta-button a:hover {
-    background-color: #005bb5;
+    background-color: #0056b3; /* Darker blue on hover */
   }
   
