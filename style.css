@@ -43,3 +43,18 @@ header {
   color: #e6b800; /* Highlight color */
   text-decoration: underline;
 }
+
+/* Video Container */
+.video-container {
+  max-width: 100%; /* Ensures the video is responsive */
+  text-align: center;
+  padding: 20px;
+  background-color: #1d1d1d;
+}
+iframe {
+  width: 100%; /* Makes the iframe responsive */
+  max-width: 800px; /* Optional: Limit the max width */
+  height: 450px; /* Adjust the height as needed */
+  border: none; /* Removes border around the video */
+  border-radius: 10px; /* Optional: Adds rounded corners to the video */
+}
