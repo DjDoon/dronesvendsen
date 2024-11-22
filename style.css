@@ -44,17 +44,20 @@ header {
   text-decoration: underline;
 }
 
-/* Video Container */
+/* Full-Screen Video Container */
 .video-container {
-  max-width: 100%; /* Ensures the video is responsive */
-  text-align: center;
-  padding: 20px;
-  background-color: #1d1d1d;
+  position: fixed; /* Video stays in place even when scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Places video behind other content */
+  overflow: hidden;
 }
-iframe {
-  width: 100%; /* Makes the iframe responsive */
-  max-width: 800px; /* Optional: Limit the max width */
-  height: 450px; /* Adjust the height as needed */
-  border: none; /* Removes border around the video */
-  border-radius: 10px; /* Optional: Adds rounded corners to the video */
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Prevents interaction with the video */
+  border: none; /* Removes any border from the iframe */
 }
