@@ -84,31 +84,39 @@ header .navbar ul li a.active {
 
 /* Equipment Text Section */
 .equipment-text {
-    text-align: center;
-    margin: 40px 20px;
-}
-
-.equipment-text h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Ensures all text is centered */
+    margin: 0 auto; /* Centers the content horizontally */
+    padding: 40px 20px; /* Adjusts spacing around the content */
+    color: #fff; /* Ensures text color is readable */
+  }
+  
+  .equipment-text h1 {
     font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.equipment-text p {
+    margin-bottom: 20px;
+  }
+  
+  .equipment-text p {
     font-size: 18px;
     line-height: 1.6;
-    margin: 10px 0;
-}
-
-.equipment-text ul {
+    max-width: 800px; /* Limits text width for better readability */
+    margin-bottom: 20px;
+  }
+  
+  .equipment-text ul {
     list-style-type: none;
     padding: 0;
-}
-
-.equipment-text li {
-    font-size: 16px;
-    margin: 10px 0;
-}
-
+    margin: 0 auto; /* Ensures the list is centered */
+    max-width: 800px; /* Keeps the list aligned with the rest of the text */
+  }
+  
+  .equipment-text ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }  
 .equipment-text strong {
     color: #e6b800;
 }
