@@ -43,16 +43,15 @@ header {
 
 /* Video Container */
 .video-container {
-  position: absolute; /* Position it to the top of the page */
+  position: absolute; /* Keeps the video behind content */
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh; /* Full height of the viewport */
   overflow: hidden; /* Prevents overflow and keeps the container clean */
-  z-index: -1; /* Keeps the video behind the other content */
+  z-index: -1; /* Keeps the video behind the content */
 }
 
-/* Make the video (iframe) responsive */
 .video-container iframe {
   width: 100%;
   height: 100%;
@@ -60,7 +59,6 @@ header {
   border: none;
   pointer-events: none; /* Prevents interaction with the video */
 }
-
 
 /* Add space below the video for other content */
 body {
@@ -71,37 +69,37 @@ body {
 
 main {
   position: relative;
-  z-index: 5; /* Ensures main content is above the video */
-  padding: 20px;
+  z-index: 5; /* Ensures main content stays above the video */
+  padding-top: 100vh; /* Pushes content below the video */
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.sales-pitch {
-  margin-top: 40px;
-  padding: 20px;
+.content {
   background-color: #f4f4f4;
+  padding: 20px;
   border-radius: 10px;
   max-width: 900px;
-  text-align: left;
   margin-left: auto;
   margin-right: auto;
 }
 
-.sales-pitch h1 {
+.content h1 {
   color: #333;
   text-align: center;
 }
 
-.sales-pitch ul {
+.content ul {
   margin: 20px 0;
   padding-left: 40px;
 }
 
-.sales-pitch ul li {
+.content ul li {
   margin-bottom: 10px;
   line-height: 1.6;
 }
 
-.sales-pitch p {
+.content p {
   font-size: 16px;
   color: #555;
 }
