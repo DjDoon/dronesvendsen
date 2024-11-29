@@ -43,7 +43,7 @@ header {
 
 /* Video Container */
 .video-container {
-  position: absolute; /* Keeps the video behind content */
+  position: fixed; /* Keeps the video in the background */
   top: 0;
   left: 0;
   width: 100%;
@@ -75,31 +75,32 @@ main {
   padding-right: 20px;
 }
 
-.content {
+.sales-pitch {
   background-color: #f4f4f4;
-  padding: 20px;
+  padding: 40px;
   border-radius: 10px;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
+  position: relative; /* Keeps the content above the video */
 }
 
-.content h1 {
+.sales-pitch h1 {
   color: #333;
   text-align: center;
 }
 
-.content ul {
+.sales-pitch ul {
   margin: 20px 0;
   padding-left: 40px;
 }
 
-.content ul li {
+.sales-pitch ul li {
   margin-bottom: 10px;
   line-height: 1.6;
 }
 
-.content p {
+.sales-pitch p {
   font-size: 16px;
   color: #555;
 }
