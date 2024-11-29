@@ -45,7 +45,7 @@ header {
 .video-container {
   position: relative; /* Keeps video in normal flow */
   width: 90%;
-  height: 90vh; /* Ensures the video takes up 60% of the screen height */
+  height: 90vh; /* Ensures the video takes up 90% of the screen height */
 }
 
 .video-container iframe {
