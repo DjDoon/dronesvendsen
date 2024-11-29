@@ -43,17 +43,24 @@ header {
 
 /* Video Container */
 .video-container {
-  position: relative; /* Keeps video in normal flow */
-  width: 90%;
-  height: 90vh; /* Ensures the video takes up 90% of the screen height */
+  position: absolute; /* Position it to the top of the page */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Full height of the viewport */
+  overflow: hidden; /* Prevents overflow and keeps the container clean */
+  z-index: -1; /* Keeps the video behind the other content */
 }
 
+/* Make the video (iframe) responsive */
 .video-container iframe {
   width: 100%;
   height: 100%;
+  object-fit: cover; /* Ensures the video fills the container completely */
   border: none;
   pointer-events: none; /* Prevents interaction with the video */
 }
+
 
 /* Add space below the video for other content */
 body {
