@@ -3,8 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #F7F4F2; /* Light beige background */
-    color: #000;
+    background-color: #121212; /* Dark theme */
+    color: #fff;
     text-align: center;
   }
   
@@ -14,8 +14,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #000;
   }
   
   .logo img {
@@ -34,44 +33,39 @@ body {
   
   .navbar ul li a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
     font-weight: bold;
   }
   
   .navbar ul li a.active {
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #FFD700; /* Gold highlight */
   }
   
-  /* About Section */
-  .about-section {
+  /* About Section Layout */
+  .about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
     padding: 60px 20px;
-    max-width: 900px;
-    margin: auto;
   }
   
-  /* Who I Am */
+  .about-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+  }
+  
+  /* Who I Am (Text on Right) */
   .about-content {
-    margin-bottom: 40px;
+    text-align: left;
+    max-width: 500px;
   }
   
   .about-title {
     font-size: 36px;
     font-weight: bold;
-  }
-  
-  .about-content p {
-    font-size: 18px;
-    max-width: 600px;
-    margin: auto;
-  }
-  
-  /* About Me Image */
-  .about-image img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 40px;
+    color: #FFD700; /* Gold color */
   }
   
   /* Clients Section */
@@ -85,8 +79,10 @@ body {
   }
   
   .clients-subtitle {
-    font-size: 24px;
+    font-size: 28px;
+    font-family: "Times New Roman", serif; /* Elegant font */
     font-style: italic;
+    color: #FFD700; /* Gold */
     margin-bottom: 20px;
   }
   
@@ -101,9 +97,8 @@ body {
   .client-name {
     font-size: 22px;
     font-weight: bold;
-    color: #000;
+    color: #FFD700;
     text-decoration: none;
-    margin-bottom: 10px;
   }
   
   .client-name:hover {
@@ -119,5 +114,25 @@ body {
   .client-description {
     font-size: 18px;
     max-width: 600px;
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #000;
+  }
+  
+  footer p {
+    color: #fff;
+  }
+  
+  footer a {
+    color: #FFD700; /* Gold */
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
   }
   
