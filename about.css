@@ -1,0 +1,123 @@
+/* General Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F7F4F2; /* Light beige background */
+    color: #000;
+    text-align: center;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo img {
+    max-height: 50px;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar ul li {
+    display: inline;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .navbar ul li a.active {
+    border-bottom: 2px solid #000;
+  }
+  
+  /* About Section */
+  .about-section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  /* Who I Am */
+  .about-content {
+    margin-bottom: 40px;
+  }
+  
+  .about-title {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  .about-content p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  /* About Me Image */
+  .about-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 40px;
+  }
+  
+  /* Clients Section */
+  .clients-section {
+    padding: 40px 20px;
+  }
+  
+  .clients-title {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  .clients-subtitle {
+    font-size: 24px;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  
+  /* Individual Client */
+  .client {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .client-name {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    margin-bottom: 10px;
+  }
+  
+  .client-name:hover {
+    text-decoration: underline;
+  }
+  
+  .client-logo {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .client-description {
+    font-size: 18px;
+    max-width: 600px;
+  }
+  
