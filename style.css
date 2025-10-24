@@ -6,7 +6,7 @@ header {
   padding: 30px 50px;
   background-color: #1a1a1a;
   position: relative;
-  z-index: 10; /* Keeps the header above the video */
+  z-index: 10; /* Holder header over bildet */
 }
 
 .logo img {
@@ -41,26 +41,38 @@ header {
   text-decoration: underline;
 }
 
-/* Video Container */
-.video-container {
-  position: fixed; /* Keeps the video in the background */
+/* Bilde-container (erstatter video) */
+.image-container {
+  position: fixed; /* Holder bildet i bakgrunnen */
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh; /* Full height of the viewport */
-  overflow: hidden; /* Prevents overflow and keeps the container clean */
-  z-index: -1; /* Keeps the video behind the content */
+  height: 100vh; /* Full høyde av viewport */
+  overflow: hidden;
+  z-index: -1; /* Bak innholdet */
 }
 
-.video-container iframe {
+/* Hvis du bruker <img> inni .image-container */
+.image-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the video fills the container completely */
-  border: none;
-  pointer-events: none; /* Prevents interaction with the video */
+  object-fit: cover; /* Fyller boksen uten å forvrenge */
+  display: block;
+  user-select: none;
+  pointer-events: none; /* Ikke interaktivt, som iframen var */
 }
 
-/* Add space below the video for other content */
+/* (Valgfritt) Legg til et subtilt mørkt slør for bedre kontrast mot tekst */
+/*
+.image-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+}
+*/
+
+/* Grunnoppsett */
 body {
   margin: 0;
   padding: 0;
@@ -69,8 +81,8 @@ body {
 
 main {
   position: relative;
-  z-index: 5; /* Ensures main content stays above the video */
-  padding-top: 100vh; /* Pushes content below the video */
+  z-index: 5; /* Over bildet */
+  padding-top: 100vh; /* Skyver innholdet ned under helskjerm-bildet */
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -82,12 +94,14 @@ main {
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-  position: relative; /* Keeps the content above the video */
+  position: relative; /* Over bildet */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 .sales-pitch h1 {
   color: #333;
   text-align: center;
+  margin-top: 0;
 }
 
 .sales-pitch ul {
@@ -103,4 +117,17 @@ main {
 .sales-pitch p {
   font-size: 16px;
   color: #555;
+}
+
+/* Små forbedringer for mindre skjermer */
+@media (max-width: 768px) {
+  header {
+    padding: 20px;
+  }
+  .navbar ul li a {
+    font-size: 16px;
+  }
+  .sales-pitch {
+    padding: 24px;
+  }
 }
