@@ -6,7 +6,7 @@ header {
   padding: 30px 50px;
   background-color: #1a1a1a;
   position: relative;
-  z-index: 10; /* Holder header over bildet */
+  z-index: 10; /* Holder header over hero-bakgrunnen */
 }
 
 .logo img {
@@ -41,36 +41,24 @@ header {
   text-decoration: underline;
 }
 
-/* Bilde-container (erstatter video) */
-.image-container {
-  position: fixed; /* Holder bildet i bakgrunnen */
-  top: 0;
-  left: 0;
+/* Hero-seksjon med bakgrunnsbilde */
+.hero {
+  position: relative;
   width: 100%;
-  height: 100vh; /* Full høyde av viewport */
-  overflow: hidden;
-  z-index: -1; /* Bak innholdet */
+  min-height: 100vh;              /* Fullskjermhøyde */
+  background-image: url("images/drone.jpg"); /* ← bytt til ønsket bilde */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-/* Hvis du bruker <img> inni .image-container */
-.image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Fyller boksen uten å forvrenge */
-  display: block;
-  user-select: none;
-  pointer-events: none; /* Ikke interaktivt, som iframen var */
-}
-
-/* (Valgfritt) Legg til et subtilt mørkt slør for bedre kontrast mot tekst */
-/*
-.image-container::after {
+/* Mørkt slør for bedre lesbarhet over bildet */
+.hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.25);
+  background: rgba(0, 0, 0, 0.45);
 }
-*/
 
 /* Grunnoppsett */
 body {
@@ -81,12 +69,11 @@ body {
 
 main {
   position: relative;
-  z-index: 5; /* Over bildet */
-  padding-top: 100vh; /* Skyver innholdet ned under helskjerm-bildet */
-  padding-left: 20px;
-  padding-right: 20px;
+  z-index: 5; /* Over hero-laget */
+  padding: 20px;
 }
 
+/* Innholdsboks */
 .sales-pitch {
   background-color: #f4f4f4;
   padding: 40px;
@@ -94,7 +81,6 @@ main {
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-  position: relative; /* Over bildet */
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
