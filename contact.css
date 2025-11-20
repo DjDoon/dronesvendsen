@@ -11,15 +11,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 50px; /* Increase the top/bottom padding */
+    padding: 30px 50px;
     background-color: #1a1a1a;
-    height: 100px; /* Define a fixed height for the header */
+    height: 100px;
     position: relative;
-    z-index: 10; /* Keeps the header above other content */
+    z-index: 10;
 }
 
 .logo img {
-    height: 70px; /* Adjust logo size if needed */
+    height: 70px;
 }
 
 .navbar ul {
@@ -37,7 +37,7 @@ header {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-    font-size: 18px; /* Adjust font size if you want links to look bigger */
+    font-size: 18px;
     transition: color 0.3s;
 }
 
@@ -46,21 +46,21 @@ header {
 }
 
 .navbar ul li a.active {
-    color: #e6b800; /* Highlight color */
+    color: #e6b800;
     text-decoration: underline;
 }
 
 /* Main Content Styling */
 main {
     position: relative;
-    z-index: 5; /* Ensures main content is above the video */
+    z-index: 5;
     padding: 20px;
 }
 
 /* Contact Section */
 .contact {
     max-width: 800px;
-    margin: 80px auto; /* Centers the section and adds top margin */
+    margin: 80px auto;
     text-align: center;
     padding: 50px 20px;
     background-color: #2a2a2a;
@@ -118,6 +118,7 @@ main {
     width: 50px;
     height: 50px;
     border-radius: 10px;
+    object-fit: contain;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
@@ -155,7 +156,6 @@ footer {
     }
 
     .social-links {
-        flex-direction: row;
         gap: 20px;
     }
 }
