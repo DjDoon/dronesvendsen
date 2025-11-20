@@ -9,12 +9,14 @@ body {
   }
   
   /* Header */
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #000;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  background-color: #1a1a1a;
+  position: relative;
+  z-index: 10; /* Holder header over hero-bakgrunnen */
   }
   
   .logo img {
