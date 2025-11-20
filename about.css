@@ -1,140 +1,150 @@
-/* General Page Styles */
+/* ----- Sticky footer setup ----- */
+html, body {
+    height: 100%;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #121212; /* Dark theme */
     color: #fff;
     text-align: center;
-  }
-  
-  /* Header */
+}
+
+/* ----- Header ----- */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 50px;
-  background-color: #1a1a1a;
-  position: relative;
-  z-index: 10; /* Holder header over hero-bakgrunnen */
-  }
-  
-  .logo img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    background-color: #1a1a1a;
+    position: relative;
+    z-index: 10;
+}
+
+.logo img {
     max-height: 50px;
-  }
-  
-  .navbar ul {
+}
+
+.navbar ul {
     list-style: none;
     display: flex;
     gap: 20px;
-  }
-  
-  .navbar ul li {
+}
+
+.navbar ul li {
     display: inline;
-  }
-  
-  .navbar ul li a {
+}
+
+.navbar ul li a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-  }
-  
-  .navbar ul li a.active {
-    border-bottom: 2px solid #FFD700; /* Gold highlight */
-  }
-  
-  /* About Section Layout */
-  .about-container {
+}
+
+.navbar ul li a.active {
+    border-bottom: 2px solid #FFD700;
+}
+
+/* ----- About Section Layout ----- */
+.about-section {
+    flex: 1; /* Push footer to bottom */
+    padding-bottom: 40px;
+}
+
+.about-container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 40px;
     padding: 60px 20px;
-  }
-  
-  .about-image img {
+}
+
+.about-image img {
     width: 100%;
     max-width: 500px;
     border-radius: 10px;
-  }
-  
-  /* Who I Am (Text on Right) */
-  .about-content {
+}
+
+/* ----- About Text ----- */
+.about-content {
     text-align: left;
     max-width: 500px;
-  }
-  
-  .about-title {
+}
+
+.about-title {
     font-size: 36px;
     font-weight: bold;
-    color: #FFD700; /* Gold color */
-  }
-  
-  /* Clients Section */
-  .clients-section {
+    color: #FFD700;
+}
+
+/* ----- Clients Section (not active but kept clean) ----- */
+.clients-section {
     padding: 40px 20px;
-  }
-  
-  .clients-title {
+}
+
+.clients-title {
     font-size: 36px;
     font-weight: bold;
-  }
-  
-  .clients-subtitle {
+}
+
+.clients-subtitle {
     font-size: 28px;
-    font-family: "Times New Roman", serif; /* Elegant font */
+    font-family: "Times New Roman", serif;
     font-style: italic;
-    color: #FFD700; /* Gold */
+    color: #FFD700;
     margin-bottom: 20px;
-  }
-  
-  /* Individual Client */
-  .client {
+}
+
+.client {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 30px;
-  }
-  
-  .client-name {
+}
+
+.client-name {
     font-size: 22px;
     font-weight: bold;
     color: #FFD700;
     text-decoration: none;
-  }
-  
-  .client-name:hover {
+}
+
+.client-name:hover {
     text-decoration: underline;
-  }
-  
-  .client-logo {
+}
+
+.client-logo {
     max-width: 150px;
     height: auto;
     margin-bottom: 10px;
-  }
-  
-  .client-description {
+}
+
+.client-description {
     font-size: 18px;
     max-width: 600px;
-  }
-  
-  /* Footer */
-  footer {
-    margin-top: 40px;
+}
+
+/* ----- Footer (Sticky Bottom) ----- */
+footer {
+    margin-top: auto;   /* pushes footer to bottom */
     padding: 20px;
     background-color: #000;
-  }
-  
-  footer p {
+}
+
+footer p {
     color: #fff;
-  }
-  
-  footer a {
-    color: #FFD700; /* Gold */
+}
+
+footer a {
+    color: #FFD700;
     text-decoration: none;
-  }
-  
-  footer a:hover {
+}
+
+footer a:hover {
     text-decoration: underline;
-  }
-  
+}
