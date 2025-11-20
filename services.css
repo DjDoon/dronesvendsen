@@ -170,3 +170,70 @@ header .navbar ul li a.active {
 .cta-button .btn:hover {
     background-color: #777;
 }
+
+/* Tittel øverst */
+.services-title {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.services-title h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+  color: #e6b800;
+}
+
+.services-title p {
+  font-size: 18px;
+  color: #fff;
+}
+
+
+/* Grid layout */
+.service-grid {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 40px;
+}
+
+/* Bokser */
+.service-box {
+  width: 40%;
+  background-color: #333;
+  padding: 25px;
+  border-radius: 12px;
+  color: #fff;
+  position: relative;
+}
+
+/* Boksplassering */
+.box1 {
+  margin-left: 0;
+}
+
+.box2 {
+  margin-left: 60%;
+  margin-top: 50px;
+}
+
+.box3 {
+  margin-left: 0;
+  margin-top: 50px;
+}
+
+.box4 {
+  margin-left: 60%;
+  margin-top: 50px;
+}
+
+/* Typografi */
+.service-box h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.service-box p {
+  font-size: 16px;
+}
+
