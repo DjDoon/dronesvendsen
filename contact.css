@@ -4,10 +4,10 @@ body {
     font-family: Arial, sans-serif;
     color: #fff;
     background-color: #1d1d1d;
-  }
-  
-  /* Header */
-  header {
+}
+
+/* Header */
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,49 +16,49 @@ body {
     height: 100px; /* Define a fixed height for the header */
     position: relative;
     z-index: 10; /* Keeps the header above other content */
-  }
-  
-  .logo img {
+}
+
+.logo img {
     height: 70px; /* Adjust logo size if needed */
-  }
-  
-  .navbar ul {
+}
+
+.navbar ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-  }
-  
-  .navbar ul li {
+}
+
+.navbar ul li {
     margin: 0 15px;
-  }
-  
-  .navbar ul li a {
+}
+
+.navbar ul li a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
     font-size: 18px; /* Adjust font size if you want links to look bigger */
     transition: color 0.3s;
-  }
-  
-  .navbar ul li a:hover {
+}
+
+.navbar ul li a:hover {
     color: #e6b800;
-  }
-  
-  .navbar ul li a.active {
+}
+
+.navbar ul li a.active {
     color: #e6b800; /* Highlight color */
     text-decoration: underline;
-  }
-  
-  /* Main Content Styling */
-  main {
+}
+
+/* Main Content Styling */
+main {
     position: relative;
     z-index: 5; /* Ensures main content is above the video */
     padding: 20px;
-  }
-  
-  /* Contact Section */
-  .contact {
+}
+
+/* Contact Section */
+.contact {
     max-width: 800px;
     margin: 80px auto; /* Centers the section and adds top margin */
     text-align: center;
@@ -66,71 +66,69 @@ body {
     background-color: #2a2a2a;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  }
-  
-  .contact h1 {
+}
+
+.contact h1 {
     font-size: 36px;
     margin-bottom: 40px;
     color: #e6b800;
-  }
-  
-  .contact-item {
+}
+
+.contact-item {
     margin-bottom: 40px;
-  }
-  
-  .contact-item h2 {
+}
+
+.contact-item h2 {
     font-size: 24px;
     margin-bottom: 15px;
     color: #fff;
-  }
-  
-  .contact-item p {
+}
+
+.contact-item p {
     font-size: 18px;
     line-height: 1.6;
-  }
-  
-  .contact-item a {
+}
+
+.contact-item a {
     color: #e6b800;
     text-decoration: none;
-  }
-  
-  .contact-item a:hover {
+}
+
+.contact-item a:hover {
     text-decoration: underline;
-  }
-  
-  /* Social Buttons */
-  .social-links {
+}
+
+/* Social Media Section (Instagram + LinkedIn) */
+.social-media h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Icons container */
+.social-links {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     margin-top: 15px;
-  }
-  
-  .social-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .social-button.facebook {
-    background-color: #3b5998;
-  }
-  
-  .social-button.instagram {
-    background-color: #e1306c;
-  }
-  
-  .social-button:hover {
-    filter: brightness(1.1);
-  }
-  
-  /* Footer Styling */
-  footer {
+}
+
+/* Felles stil for sosiale logoer (Instagram + LinkedIn) */
+.social-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.social-logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer Styling */
+footer {
     background-color: #1a1a1a;
     color: #fff;
     text-align: center;
@@ -138,31 +136,31 @@ body {
     font-size: 16px;
     position: relative;
     z-index: 10;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
     .navbar ul {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
-  
+
     .navbar ul li {
-      margin: 10px 0;
+        margin: 10px 0;
     }
-  
+
     .contact {
-      margin: 40px 10px;
-      padding: 30px 10px;
+        margin: 40px 10px;
+        padding: 30px 10px;
     }
-  
+
     .social-links {
-      flex-direction: column;
-      gap: 10px;
+        flex-direction: row;
+        gap: 20px;
     }
-  }
-  
-  /* Google Maps */
+}
+
+/* Google Maps */
 .map-container {
     margin: 20px auto;
     width: 100%;
@@ -170,18 +168,4 @@ body {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Instagram Logo */
-  .instagram-logo {
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .instagram-logo:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  }
-  
+}
