@@ -41,15 +41,17 @@ header {
   text-decoration: underline;
 }
 
-/* Hero-seksjon med bakgrunnsbilde */
+/* Hero-seksjon som fast bakgrunn over hele siden */
 .hero {
-  position: relative;
+  position: fixed;
+  inset: 0;                     /* top:0; right:0; bottom:0; left:0; */
   width: 100%;
-  min-height: 100vh;              /* Fullskjermhøyde */
-  background-image: url("images/drone.jpg"); /* ← bytt til ønsket bilde */
+  min-height: 100vh;
+  background-image: url("images/homeimg.png");  /* ← nytt bilde */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  z-index: 0;                    /* Ligger bak header og innhold */
 }
 
 /* Mørkt slør for bedre lesbarhet over bildet */
