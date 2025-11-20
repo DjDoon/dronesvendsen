@@ -1,4 +1,4 @@
-/* ----- Sticky footer setup ----- */
+/* ----- Sticky footer base (safe to keep even without footer) ----- */
 html, body {
     height: 100%;
 }
@@ -10,7 +10,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212; /* Dark theme */
+    background-color: #121212;
     color: #fff;
     text-align: center;
 }
@@ -52,8 +52,8 @@ header {
 
 /* ----- About Section Layout ----- */
 .about-section {
-    flex: 1; /* Push footer to bottom */
-    padding-bottom: 40px;
+    flex: 1;
+    padding-bottom: 60px; /* extra space since footer is gone */
 }
 
 .about-container {
@@ -82,7 +82,7 @@ header {
     color: #FFD700;
 }
 
-/* ----- Clients Section (not active but kept clean) ----- */
+/* (Optional) client section kept for future use but not active */
 .clients-section {
     padding: 40px 20px;
 }
@@ -127,24 +127,4 @@ header {
 .client-description {
     font-size: 18px;
     max-width: 600px;
-}
-
-/* ----- Footer (Sticky Bottom) ----- */
-footer {
-    margin-top: auto;   /* pushes footer to bottom */
-    padding: 20px;
-    background-color: #000;
-}
-
-footer p {
-    color: #fff;
-}
-
-footer a {
-    color: #FFD700;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
 }
