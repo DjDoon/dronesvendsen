@@ -1,47 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Droneoperatør Svendsen</title>
+  <title>Droneoperatør Svendsen | Dronefoto, video og inspeksjon i Fredrikstad</title>
+  <meta name="description" content="Droneoperatør Svendsen tilbyr dronefoto, dronevideo og inspeksjonstjenester i Fredrikstad og omegn.">
+  <link rel="stylesheet" href="base.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header Section -->
-  <header>
-    <div class="logo">
-      <img src="images/dronesvendsen.png" alt="My Logo">
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a class="logo-link" href="index.html" aria-label="Gå til forsiden">
+          <img src="images/dronesvendsen.png" alt="Logoen til Droneoperatør Svendsen">
+        </a>
+      </div>
+      <nav class="navbar" aria-label="Hovedmeny">
+        <ul>
+          <li><a href="index.html" class="active">Hjem</a></li>
+          <li><a href="services.html">Tjenester</a></li>
+          <li><a href="about.html">Om meg</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav class="navbar">
-      <ul>
-        <li><a href="index.html" class="active">Hjem</a></li>
-        <li><a href="services.html">Tjenester</a></li>
-        <li><a href="about.html">Om oss</a></li>
-        <li><a href="contact.html">Kontakt</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <!-- Hero bakgrunn (erstatter bilde/video) -->
-  <section class="hero"></section>
-
-  <!-- Innhold under hero -->
   <main>
-    <section class="sales-pitch">
-      <h1>Hvorfor bruke droner?</h1>
-      <p>
-        Droner har revolusjonert måten vi ser og opplever verden på. Ved å bruke droner kan du oppnå:
-      </p>
-      <ul>
-          <li><strong>Unike perspektiver:</strong> Luftfoto gir en fantastisk oversikt og avslører detaljer som ellers ville vært skjult.</li>
-          <li><strong>Kostnadseffektive løsninger:</strong> Droner kan utføre inspeksjoner og dokumentasjon raskt og til en brøkdel av prisen sammenlignet med tradisjonelle metoder.</li>
-          <li><strong>Sikkerhet:</strong> Reduser risiko ved inspeksjon av høye bygninger eller farlige områder.</li>
-          <li><strong>Profesjonell kvalitet:</strong> Moderne droner leverer bilder og videoer i høy kvalitet — perfekt for markedsføring, inspeksjoner og dokumentasjon.</li>
-      </ul>
-      <p>
-        Hos <strong>Droneoperatør Svendsen</strong> kombinerer vi ekspertise og moderne teknologi for å levere resultater som overgår forventningene dine.
-      </p>
+    <section class="hero-home">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <div class="hero-text section-card">
+          <p class="eyebrow">Dronefoto, video og inspeksjon</p>
+          <h1>Profesjonelle dronetjenester med fokus på kvalitet og trygg gjennomføring</h1>
+          <p>
+            Jeg hjelper bedrifter og privatpersoner med innhold som gir bedre oversikt,
+            sterkere presentasjon og tryggere inspeksjoner.
+          </p>
+          <div class="hero-actions">
+            <a href="services.html" class="btn">Se tjenester</a>
+            <a href="contact.html" class="btn-secondary">Ta kontakt</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section why-drones">
+      <div class="container">
+        <article class="sales-pitch section-card">
+          <div class="section-heading">
+            <h2>Hvorfor bruke droner?</h2>
+            <p>Droner gir bedre oversikt, raskere gjennomføring og profesjonelt innhold som skaper verdi.</p>
+          </div>
+
+          <ul class="benefits-list">
+            <li><strong>Unike perspektiver:</strong> Luftfoto gir en oversikt som fremhever detaljer og omgivelser på en helt annen måte.</li>
+            <li><strong>Kostnadseffektive løsninger:</strong> Droner kan utføre dokumentasjon og inspeksjoner raskt og mer effektivt enn mange tradisjonelle metoder.</li>
+            <li><strong>Økt sikkerhet:</strong> Ved å bruke drone kan man redusere risiko ved arbeid i høyden eller på vanskelig tilgjengelige steder.</li>
+            <li><strong>Profesjonell kvalitet:</strong> Moderne droner leverer bilder og video i høy kvalitet, perfekt for markedsføring, inspeksjon og dokumentasjon.</li>
+          </ul>
+
+          <p class="closing-text">
+            Hos <strong>Droneoperatør Svendsen</strong> får du moderne teknologi kombinert med personlig oppfølging og fokus på et godt sluttresultat.
+          </p>
+        </article>
+      </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Droneoperatør Svendsen · Fredrikstad, Norge</p>
+    </div>
+  </footer>
 </body>
 </html>

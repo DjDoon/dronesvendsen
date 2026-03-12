@@ -3,68 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tjenester</title>
+  <title>Tjenester | Droneoperatør Svendsen</title>
+  <meta name="description" content="Se hvilke dronetjenester Droneoperatør Svendsen tilbyr, fra innhold til sosiale medier til inspeksjon og eiendomsvideo.">
+  <link rel="stylesheet" href="base.css">
   <link rel="stylesheet" href="services.css">
 </head>
 <body>
-  <!-- Header Section -->
-  <header>
-    <div class="logo">
-      <a href="index.html"><img src="images/dronesvendsen.png" alt="Drone Svendsen Logo"></a>
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a class="logo-link" href="index.html" aria-label="Gå til forsiden">
+          <img src="images/dronesvendsen.png" alt="Logoen til Droneoperatør Svendsen">
+        </a>
+      </div>
+      <nav class="navbar" aria-label="Hovedmeny">
+        <ul>
+          <li><a href="index.html">Hjem</a></li>
+          <li><a href="services.html" class="active">Tjenester</a></li>
+          <li><a href="about.html">Om meg</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav class="navbar">
-      <ul>
-        <li><a href="index.html">Hjem</a></li>
-        <li><a href="services.html" class="active">Tjenester</a></li>
-        <li><a href="about.html">Om oss</a></li>
-        <li><a href="contact.html">Kontakt</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <!-- Top Section with Image -->
-  <section class="hero-image">
-    <img src="images/services-header.jpg" alt="Services overview">
-  </section>
+  <main>
+    <section class="services-hero">
+      <img src="images/services-header.jpg" alt="Oversiktsbilde av dronetjenester">
+    </section>
 
-<!-- Main Content Section -->
-<main>
-  <section class="services-title">
-    <h1>Våre Tjenester</h1>
-    <p>Vi tilbyr et bredt spekter av profesjonelle drone-tjenester.</p>
-  </section>
+    <section class="page-section">
+      <div class="container">
+        <div class="section-heading">
+          <h1>Mine tjenester</h1>
+          <p>Jeg tilbyr fleksible dronetjenester tilpasset behovet ditt, enten du trenger innhold, dokumentasjon eller inspeksjon.</p>
+        </div>
 
-  <!-- 4 BOKSER I ØNSKET LAYOUT -->
-  <section class="service-grid">
+        <section class="services-grid" aria-label="Tjenester">
+          <article class="service-box section-card">
+            <h2>Sosiale medier</h2>
+            <p>Engasjerende dronefoto og video tilpasset innhold for sosiale medier og digital markedsføring.</p>
+          </article>
 
-<div class="service-box box1">
-  <h3>Sosiale medier</h3>
-  <p>Engasjerende dronefoto og video skreddersydd for sosiale medier.</p>
-</div>
+          <article class="service-box section-card">
+            <h2>Eiendomsvideoer</h2>
+            <p>Profesjonelle videoer og bilder som viser boliger, tomter og eiendommer fra sin beste side.</p>
+          </article>
 
-<div class="service-box box2">
-  <h3>Eiendomsvideoer</h3>
-  <p>Profesjonelle bolig- og eiendomsvideoer som fremhever hver detalj.</p>
-</div>
+          <article class="service-box section-card">
+            <h2>Inspeksjonstjenester</h2>
+            <p>Trygge og effektive inspeksjoner av bygg, tak og andre områder som er vanskelige å komme til.</p>
+          </article>
 
-<div class="service-box box3">
-  <h3>Inspeksjonstjenester</h3>
-  <p>Sikre og effektive inspeksjoner av vanskelig tilgjengelige områder.</p>
-</div>
+          <article class="service-box section-card">
+            <h2>Skreddersydde prosjekter</h2>
+            <p>Har du et spesialoppdrag? Jeg tilpasser løsning, opptak og leveranse etter prosjektet ditt.</p>
+          </article>
+        </section>
 
-<div class="service-box box4">
-  <h3>Skreddersydde prosjekter</h3>
-  <p>Droneoppdrag tilpasset dine behov — uansett type prosjekt.</p>
+        <div class="cta-button">
+          <a href="contact.html" class="btn">Ta kontakt</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Droneoperatør Svendsen · Fredrikstad, Norge</p>
     </div>
-
-  </section>
-
-</main>
-
-  <!-- Call-to-Action Button -->
-  <section class="cta-button">
-    <a href="contact.html" class="btn">Contact Us</a>
-  </section>
-</main>
+  </footer>
 </body>
 </html>

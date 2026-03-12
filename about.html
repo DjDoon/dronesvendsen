@@ -1,68 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Om meg</title>
-  <link rel="stylesheet" href="about.css"> <!-- New CSS for About Me page -->
+  <title>Om meg | Droneoperatør Svendsen</title>
+  <meta name="description" content="Les mer om Jon Erling Svendsen og arbeidet bak Droneoperatør Svendsen.">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="about.css">
 </head>
 <body>
-  <header>
-    <div class="logo">
-        <img src="images/dronesvendsen.png" alt="My Logo">
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a class="logo-link" href="index.html" aria-label="Gå til forsiden">
+          <img src="images/dronesvendsen.png" alt="Logoen til Droneoperatør Svendsen">
+        </a>
+      </div>
+      <nav class="navbar" aria-label="Hovedmeny">
+        <ul>
+          <li><a href="index.html">Hjem</a></li>
+          <li><a href="services.html">Tjenester</a></li>
+          <li><a href="about.html" class="active">Om meg</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav class="navbar">
-      <ul>
-        <li><a href="index.html">Hjem</a></li>
-        <li><a href="services.html">Tjenester</a></li>
-        <li><a href="about.html" class="active">Om meg</a></li>
-        <li><a href="contact.html">Kontakt</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <main class="about-section">
-    <div class="about-container">
-      <!-- About Me Image on Left -->
-      <section class="about-image">
-        <img src="images/aboutme.png" alt="Bilde av meg">
-      </section>
+  <main>
+    <section class="page-section">
+      <div class="container">
+        <div class="about-container section-card">
+          <section class="about-image">
+            <img src="images/aboutme.png" alt="Portrett av Jon Erling Svendsen">
+          </section>
 
-      <!-- Who I Am on Right -->
-      <section class="about-content">
-        <h1 class="about-title">WHO I AM</h1>
-        <p>
-        Jeg er en engasjert lærling i droneoperatørfaget og brenner for å skape imponerende og visuelt sterke luftbilder.
-        Siden 2023 har jeg jobbet aktivt med droner og utviklet meg innen film, foto og inspeksjonstjenester.
-        Målet mitt er å levere innhold som løfter prosjektene dine og overgår forventningene.
-        </p>
-      </section>
-    </div>
-
-    <!-- Clients Section Below -->
-    <!--   <section class="clients-section">
-      <h2 class="clients-title">CLIENTS</h2>
-      <h3 class="clients-subtitle">Past & Present</h3>
-      <p>
-        I have worked with a range of businesses, from real estate agencies to commercial enterprises, 
-        delivering professional aerial photography and video solutions that bring visions to life.
-      </p>
-
-      Example Client 
-      <div class="client">
-        <a href="https://www.client1.com" target="_blank" class="client-name">Client 1</a>
-        <img src="images/client1.png" alt="Client 1 Logo" class="client-logo">
-        <p class="client-description">We provided high-quality drone footage for their real estate listings.</p>
-      </div>
-
-      <div class="client">
-        <a href="https://www.client2.com" target="_blank" class="client-name">Client 2</a>
-        <img src="images/client2.png" alt="Client 2 Logo" class="client-logo">
-        <p class="client-description">Captured promotional aerial videos for their luxury resort.</p>
+          <section class="about-content">
+            <p class="eyebrow">Om meg</p>
+            <h1>Jeg brenner for sterke luftbilder og profesjonelle leveranser</h1>
+            <p>
+              Jeg er lærling i droneoperatørfaget og jobber målrettet med å utvikle meg innen film,
+              foto og inspeksjonstjenester.
+            </p>
+            <p>
+              Siden 2023 har jeg jobbet aktivt med droner og bygget erfaring med opptak som både ser bra ut
+              og dekker et praktisk behov. Målet mitt er å levere innhold som løfter prosjektet ditt og gir deg et resultat du er fornøyd med.
+            </p>
+            <a href="contact.html" class="btn">Kontakt meg</a>
+          </section>
+        </div>
       </div>
     </section>
-  </main> -->
+  </main>
 
-
+  <footer class="site-footer">
+    <div class="container">
+      <p>Droneoperatør Svendsen · Fredrikstad, Norge</p>
+    </div>
+  </footer>
 </body>
 </html>
