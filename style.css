@@ -1,123 +1,88 @@
-/* Header */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 50px;
-  background-color: #1a1a1a;
+.hero-home {
   position: relative;
-  z-index: 10; /* Holder header over hero-bakgrunnen */
-}
-
-.logo img {
-  height: 70px;
-}
-
-.navbar ul {
+  min-height: 78vh;
   display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar ul li {
-  margin: 0 15px;
-}
-
-.navbar ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  font-size: 18px;
-  transition: color 0.3s;
-}
-
-.navbar ul li a:hover {
-  color: #e6b800;
-}
-
-.navbar ul li a.active {
-  color: #e6b800;
-  text-decoration: underline;
-}
-
-/* Hero-seksjon som fast bakgrunn over hele siden */
-.hero {
-  position: fixed;
-  inset: 0;                     /* top:0; right:0; bottom:0; left:0; */
-  width: 100%;
-  min-height: 100vh;
-  background-image: url("images/homeimg.png");  /* ← nytt bilde */
+  align-items: center;
+  background-image: url("images/homeimg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: 0;                    /* Ligger bak header og innhold */
 }
 
-/* Mørkt slør for bedre lesbarhet over bildet */
-.hero::before {
-  content: "";
+.hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.45));
 }
 
-/* Grunnoppsett */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-}
-
-main {
+.hero-content {
   position: relative;
-  z-index: 5; /* Over hero-laget */
-  padding: 20px;
+  z-index: 1;
+  padding: 4rem 0;
 }
 
-/* Innholdsboks */
+.hero-text {
+  width: min(680px, 100%);
+  padding: 2rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  color: var(--accent);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.92rem;
+}
+
+.hero-text h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 5vw, 3.7rem);
+  line-height: 1.1;
+}
+
+.hero-text p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+.hero-actions {
+  margin-top: 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
 .sales-pitch {
-  background-color: #e9dfdfce;
-  padding: 40px;
-  border-radius: 10px;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 350px;   /* ← legg til denne, juster tallet etter smak */
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  padding: 2rem;
 }
 
-
-.sales-pitch h1 {
-  color: #333;
-  text-align: center;
-  margin-top: 0;
+.benefits-list {
+  margin: 0;
+  padding-left: 1.2rem;
 }
 
-.sales-pitch ul {
-  margin: 20px 0;
-  padding-left: 40px;
+.benefits-list li {
+  margin-bottom: 1rem;
 }
 
-.sales-pitch ul li {
-  margin-bottom: 10px;
-  line-height: 1.6;
+.closing-text {
+  margin: 1.5rem 0 0;
+  color: var(--text-muted);
 }
 
-.sales-pitch p {
-  font-size: 16px;
-  color: #555;
-}
-
-/* Små forbedringer for mindre skjermer */
 @media (max-width: 768px) {
-  header {
-    padding: 20px;
+  .hero-home {
+    min-height: auto;
   }
-  .navbar ul li a {
-    font-size: 16px;
+
+  .hero-content {
+    padding: 3rem 0;
   }
+
+  .hero-text,
   .sales-pitch {
-    padding: 24px;
+    padding: 1.5rem;
   }
 }
