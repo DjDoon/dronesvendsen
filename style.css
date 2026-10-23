@@ -1,29 +1,30 @@
 .hero-home {
   position: relative;
-  min-height: 78vh;
+  min-height: 82vh;
   display: flex;
   align-items: center;
   background-image: url("images/homeimg.png");
   background-size: cover;
-  background-position: center;
+  background-position: center 40%;
   background-repeat: no-repeat;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.45));
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.55) 55%, rgba(0, 0, 0, 0.15) 100%),
+    linear-gradient(0deg, var(--bg) 0%, rgba(18, 18, 18, 0) 25%);
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
-  padding: 4rem 0;
+  padding: 5rem 0;
 }
 
 .hero-text {
-  width: min(680px, 100%);
-  padding: 2rem;
+  width: min(640px, 100%);
 }
 
 .eyebrow {
@@ -36,15 +37,22 @@
 }
 
 .hero-text h1 {
-  margin: 0 0 1rem;
-  font-size: clamp(2rem, 5vw, 3.7rem);
-  line-height: 1.1;
+  margin: 0 0 1.25rem;
+  font-size: clamp(2.3rem, 6vw, 4.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+.hero-text h1 span {
+  display: block;
+  color: var(--accent);
 }
 
 .hero-text p {
   margin: 0;
   color: var(--text-muted);
-  font-size: 1.05rem;
+  font-size: 1.1rem;
+  max-width: 34rem;
 }
 
 .hero-actions {
@@ -54,22 +62,145 @@
   gap: 1rem;
 }
 
-.sales-pitch {
-  padding: 2rem;
-}
-
-.benefits-list {
-  margin: 0;
-  padding-left: 1.2rem;
-}
-
-.benefits-list li {
-  margin-bottom: 1rem;
-}
-
-.closing-text {
-  margin: 1.5rem 0 0;
+.hero-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
   color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.hero-facts li::before {
+  content: "✓";
+  margin-right: 0.45rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.section-heading .eyebrow {
+  margin-bottom: 0.5rem;
+}
+
+.section-alt {
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Tjenester */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.25rem;
+}
+
+.service-card {
+  display: block;
+  padding: 1.75rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.service-card:hover,
+.service-card:focus-visible {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.service-card h3,
+.benefit h3,
+.step h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.service-card p,
+.benefit p,
+.step p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 1rem;
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Hvorfor drone */
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
+}
+
+.benefit {
+  padding-left: 1.25rem;
+  border-left: 3px solid var(--accent);
+}
+
+/* Slik fungerer det */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.step {
+  padding: 1.75rem;
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #111;
+  font-weight: 700;
+}
+
+/* Avslutning */
+.cta-section {
+  padding-top: 0;
+}
+
+.cta-card {
+  padding: 3rem 2rem;
+  text-align: center;
+  border-color: rgba(230, 184, 0, 0.35);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(230, 184, 0, 0.14), transparent 60%),
+    var(--bg-card);
+}
+
+.cta-card h2 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  line-height: 1.2;
+}
+
+.cta-card p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.cta-card .hero-actions {
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
@@ -77,12 +208,31 @@
     min-height: auto;
   }
 
-  .hero-content {
-    padding: 3rem 0;
+  .hero-overlay {
+    background: linear-gradient(0deg, var(--bg) 0%, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0.55) 100%);
   }
 
-  .hero-text,
-  .sales-pitch {
+  .hero-content {
+    padding: 3.5rem 0;
+  }
+
+  .service-card,
+  .step {
     padding: 1.5rem;
+  }
+
+  .cta-card {
+    padding: 2.25rem 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card {
+    transition: none;
+  }
+
+  .service-card:hover,
+  .service-card:focus-visible {
+    transform: none;
   }
 }
