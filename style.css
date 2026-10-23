@@ -98,16 +98,7 @@
 }
 
 .service-card {
-  display: block;
   padding: 1.75rem;
-  text-decoration: none;
-  transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.service-card:hover,
-.service-card:focus-visible {
-  transform: translateY(-4px);
-  border-color: var(--accent);
 }
 
 .service-card h3,
@@ -344,13 +335,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .service-card,
   .gallery-item img {
     transition: none;
   }
 
-  .service-card:hover,
-  .service-card:focus-visible,
   .gallery-item:hover img {
     transform: none;
   }
