@@ -174,6 +174,107 @@
   font-weight: 700;
 }
 
+/* Galleri */
+.gallery-section {
+  padding-top: 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.gallery-item {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  aspect-ratio: 4 / 3;
+}
+
+.gallery-item-wide {
+  grid-column: span 2;
+  aspect-ratio: auto;
+}
+
+.gallery-item a {
+  display: block;
+  height: 100%;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.04);
+}
+
+.gallery-item figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2rem 1rem 0.75rem;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), transparent);
+  font-size: 0.9rem;
+  color: var(--text);
+  pointer-events: none;
+}
+
+/* Kundesitat */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.testimonial {
+  margin: 0;
+  padding: 2rem;
+}
+
+.testimonial blockquote {
+  margin: 0 0 1.25rem;
+  position: relative;
+  padding-top: 1.5rem;
+}
+
+.testimonial blockquote::before {
+  content: "“";
+  position: absolute;
+  top: -0.75rem;
+  left: -0.25rem;
+  font-family: Georgia, serif;
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.testimonial blockquote p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.testimonial figcaption {
+  display: flex;
+  flex-direction: column;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.testimonial figcaption strong {
+  color: var(--text);
+}
+
 /* Avslutning */
 .cta-section {
   padding-top: 0;
@@ -216,8 +317,13 @@
     padding: 3.5rem 0;
   }
 
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .service-card,
-  .step {
+  .step,
+  .testimonial {
     padding: 1.5rem;
   }
 
@@ -226,13 +332,26 @@
   }
 }
 
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item-wide {
+    grid-column: auto;
+    aspect-ratio: 4 / 3;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .service-card {
+  .service-card,
+  .gallery-item img {
     transition: none;
   }
 
   .service-card:hover,
-  .service-card:focus-visible {
+  .service-card:focus-visible,
+  .gallery-item:hover img {
     transform: none;
   }
 }
