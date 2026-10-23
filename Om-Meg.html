@@ -31,25 +31,78 @@
 
   <main>
     <section class="page-section">
-      <div class="container">
-        <div class="about-container section-card">
-          <section class="about-image">
-            <img src="images/aboutme.png" alt="Portrett av Jon Erling Svendsen">
-          </section>
+      <div class="container about-intro">
+        <div class="about-image">
+          <!--
+            PORTRETT: legg bildet i images/aboutme.jpg (stående, ca. 800×1000 px)
+            og bytt ut <div class="portrait-placeholder"> under med:
+            <img src="images/aboutme.jpg" alt="Portrett av Jon Erling Svendsen">
+          -->
+          <div class="portrait-placeholder" role="img" aria-label="Plass til portrett av Jon Erling Svendsen">
+            <span>JES</span>
+          </div>
+        </div>
 
-          <section class="about-content">
-            <p class="eyebrow">Om meg</p>
-            <h1>Jeg brenner for sterke luftbilder og profesjonelle leveranser</h1>
-            <p>
-              Jeg er lærling i droneoperatørfaget og jobber målrettet med å utvikle meg innen film,
-              foto og inspeksjonstjenester.
-            </p>
-            <p>
-              Siden 2023 har jeg jobbet aktivt med droner og bygget erfaring med opptak som både ser bra ut
-              og dekker et praktisk behov. Målet mitt er å levere innhold som løfter prosjektet ditt og gir deg et resultat du er fornøyd med.
-            </p>
+        <div class="about-content">
+          <p class="eyebrow">Om meg</p>
+          <h1>Hei, jeg er <span>Jon Erling Svendsen</span></h1>
+          <p class="lead">
+            Jeg brenner for sterke luftbilder og profesjonelle leveranser – og for å gi deg et resultat du faktisk får bruk for.
+          </p>
+          <p>
+            Jeg er lærling i droneoperatørfaget og jobber målrettet med å utvikle meg innen film,
+            foto og inspeksjonstjenester.
+          </p>
+          <p>
+            Siden 2023 har jeg jobbet aktivt med droner og bygget erfaring med opptak som både ser bra ut
+            og dekker et praktisk behov. Målet mitt er å levere innhold som løfter prosjektet ditt.
+          </p>
+
+          <ul class="about-facts">
+            <li><strong>2023</strong><span>Flyr droner siden</span></li>
+            <li><strong>Lærling</strong><span>i droneoperatørfaget</span></li>
+            <li><strong>Fredrikstad</strong><span>og omegn</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Hva du kan forvente</p>
+          <h2>Slik jobber jeg</h2>
+        </div>
+
+        <div class="value-grid">
+          <div class="value">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+            <h3>Personlig oppfølging</h3>
+            <p>Du har én kontaktperson hele veien, fra første melding til ferdig leveranse.</p>
+          </div>
+          <div class="value">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+            <h3>Trygg gjennomføring</h3>
+            <p>Sikkerhet kommer først – for folk, eiendom og omgivelser.</p>
+          </div>
+          <div class="value">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9L12 3Z"/></svg>
+            <h3>Fokus på kvalitet</h3>
+            <p>Moderne utstyr og nøye redigering, så resultatet holder mål.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section cta-section cta-after-alt">
+      <div class="container">
+        <div class="cta-card section-card">
+          <h2>Lyst til å jobbe sammen?</h2>
+          <p>Fortell meg om prosjektet ditt, så finner vi en løsning som passer.</p>
+          <div class="hero-actions">
             <a href="Kontakt.html" class="btn">Kontakt meg</a>
-          </section>
+            <a href="/" class="btn-secondary">Se hva jeg tilbyr</a>
+          </div>
         </div>
       </div>
     </section>

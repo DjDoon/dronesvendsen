@@ -129,6 +129,71 @@ main {
   color: var(--text-muted);
 }
 
+.eyebrow {
+  margin: 0 0 0.75rem;
+  color: var(--accent);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.92rem;
+}
+
+.section-heading .eyebrow {
+  margin-bottom: 0.5rem;
+}
+
+.section-alt {
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 1rem;
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.hero-actions {
+  margin-top: 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cta-section {
+  padding-top: 0;
+}
+
+.cta-card {
+  padding: 3rem 2rem;
+  text-align: center;
+  border-color: rgba(230, 184, 0, 0.35);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(230, 184, 0, 0.14), transparent 60%),
+    var(--bg-card);
+}
+
+.cta-card h2 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  line-height: 1.2;
+}
+
+.cta-card p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.cta-card .hero-actions {
+  justify-content: center;
+}
+
 .btn,
 .btn-secondary {
   display: inline-flex;
@@ -196,5 +261,9 @@ main {
 
   .page-section {
     padding: 3rem 0;
+  }
+
+  .cta-card {
+    padding: 2.25rem 1.25rem;
   }
 }
